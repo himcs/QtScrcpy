@@ -554,12 +554,12 @@ void VideoForm::staysOnTop(bool top)
 void VideoForm::mousePressEvent(QMouseEvent *event)
 {
     auto device = qsc::IDeviceManage::getInstance().getDevice(m_serial);
-    if (event->button() == Qt::MiddleButton) {
-        if (device && !device->isCurrentCustomKeymap()) {
-            device->postGoHome();
-            return;
-        }
-    }
+    // if (event->button() == Qt::MiddleButton) {
+    //     if (device && !device->isCurrentCustomKeymap()) {
+    //         device->postGoHome();
+    //         return;
+    //     }
+    // }
 
     if (event->button() == Qt::RightButton) {
         if (device && !device->isCurrentCustomKeymap()) {
